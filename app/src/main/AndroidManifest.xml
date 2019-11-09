@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Feature_Project.Feature_Projek_1"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
