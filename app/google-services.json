@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "473126467515",
+    "firebase_url": "https://vorgo-2431f.firebaseio.com",
+    "project_id": "vorgo-2431f",
+    "storage_bucket": "vorgo-2431f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473126467515:android:6ddac214137e084964769e",
+        "android_client_info": {
+          "package_name": "umn.ac.vorgoprojek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473126467515-pj7uj893d3huqc7mpqvcaptijkji8ph5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMGvr1FRwYD-zaYHvDwPV6sVkmux-ERvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473126467515-pj7uj893d3huqc7mpqvcaptijkji8ph5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
