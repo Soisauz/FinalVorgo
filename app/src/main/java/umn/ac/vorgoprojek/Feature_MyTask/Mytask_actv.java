@@ -23,7 +23,7 @@ public class Mytask_actv extends AppCompatActivity {
         navigationView = findViewById(R.id.space);
         navigationView.initWithSaveInstanceState(savedInstanceState);
 
-        navigationView.addSpaceItem(new SpaceItem("", R.drawable.ic_chat_black_24dp));
+        navigationView.addSpaceItem(new SpaceItem("project", R.drawable.ic_chat_black_24dp));
         navigationView.addSpaceItem(new SpaceItem("", R.drawable.ic_friends_black_24dp));
         navigationView.addSpaceItem(new SpaceItem("", R.drawable.ic_collections_bookmark_black_24dp));
         navigationView.addSpaceItem(new SpaceItem("", R.drawable.ic_more_vert_black_24dp));
@@ -31,18 +31,18 @@ public class Mytask_actv extends AppCompatActivity {
         navigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
             public void onCentreButtonClick() {
-                Toast.makeText(Mytask_actv.this,"My Task", Toast.LENGTH_SHORT).show();
+
                 navigationView.setCentreButtonSelectable(true);
             }
 
             @Override
             public void onItemClick(int itemIndex, String itemName) {
-                Toast.makeText(Mytask_actv.this, itemIndex+" " + itemName, Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
-                Toast.makeText(Mytask_actv.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
+
             }
         });
     }
