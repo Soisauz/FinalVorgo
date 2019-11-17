@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import umn.ac.vorgoprojek.BottomNav;
-import umn.ac.vorgoprojek.Feature_MyTask.Mytask_actv;
-
+import umn.ac.vorgoprojek.Feature_Project.Project;
+import umn.ac.vorgoprojek.MainActivity;
 import umn.ac.vorgoprojek.R;
 
 
@@ -27,7 +26,7 @@ public class LoginPage extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), BottomNav.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });

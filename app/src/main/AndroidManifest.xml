@@ -9,12 +9,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".BottomNav"
-            android:label="@string/title_activity_bottom_nav"></activity>
-        <activity
-            android:name=".navbar.Navbar"
-            android:label="@string/title_activity_navbar" />
+        <activity android:name=".Feature_Project.Project"></activity>
         <activity android:name=".Register_Login.ForgotPass" />
         <activity android:name=".Register_Login.SignUpPage" />
         <activity android:name=".Register_Login.welcomePage" />
@@ -29,6 +24,7 @@
         <activity
             android:name=".Feature_MyTask.Mytask_actv"
             android:label="@string/app_name" />
+        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
