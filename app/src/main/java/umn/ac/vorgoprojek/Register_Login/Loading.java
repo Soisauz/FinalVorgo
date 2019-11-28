@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import umn.ac.vorgoprojek.Feature_MyTask.Mytask_actv;
 import umn.ac.vorgoprojek.R;
 public class Loading extends AppCompatActivity {
 

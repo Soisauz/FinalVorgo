@@ -17,10 +17,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.411">
 
         <TextView
             android:id="@+id/textView3"
@@ -30,7 +30,8 @@
             android:fontFamily="@font/montserrat"
             android:text="Forgot Password?"
             android:textColor="@android:color/black"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView4"
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="User name /Email"
+            android:text="Email"
             android:textColor="@color/colorPrimary" />
 
         <EditText
@@ -46,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:drawableLeft="@drawable/user"
+            android:drawableLeft="@drawable/envelope"
             android:drawablePadding="10dp"
             android:ems="10"
             android:fontFamily="@font/montserrat"
@@ -55,65 +56,14 @@
             android:paddingBottom="20dp"
             android:textColor="@android:color/black" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="Password"
-            android:textColor="@color/colorPrimary" />
-
-        <EditText
-            android:id="@+id/edtPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:drawableLeft="@drawable/padlock"
-            android:drawablePadding="10dp"
-            android:ems="10"
-            android:fontFamily="@font/montserrat"
-            android:hint="Please input your password here..."
-            android:inputType="textPassword"
-            android:paddingBottom="20dp"
-            android:textColor="@android:color/black" />
-
         <Button
-            android:id="@+id/btnSignIn"
+            android:id="@+id/btnReset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:background="@drawable/buttonshape"
             android:fontFamily="@font/montserrat"
-            android:text="Sign in" />
-
-        <TextView
-            android:id="@+id/txtForgotPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="Forgot Password?"
-            android:textColor="@color/colorPrimary" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="-or-"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/btnGoogle"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/round_button" />
+            android:text="Reset Password" />
 
 
     </LinearLayout>
