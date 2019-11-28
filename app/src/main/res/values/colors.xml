@@ -8,4 +8,10 @@
     <color name="bluewhite">#E2FCFF</color>
     <color name="grey">#95989A</color>
     <color name="greyWhite">#F4F4F4</color>
+    <color name="purple">#6074F9</color>
+    <color name="pink">#E42B6A</color>
+    <color name="green">#5ABB56</color>
+    <color name="darkPurple">#3D3A62</color>
+    <color name="yellow">#F4CA8F</color>
+    <color name="whiteGrey">#FDFDFD</color>
 </resources>

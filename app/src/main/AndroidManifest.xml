@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Feature_MyTask.AddTask"></activity>
-        <activity android:name=".Feature_Project.Project" />
         <activity android:name=".Register_Login.ForgotPass" />
         <activity android:name=".Register_Login.SignUpPage" />
         <activity android:name=".Register_Login.welcomePage" />
