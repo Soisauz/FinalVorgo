@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -106,7 +107,7 @@ public class AddTask extends AppCompatActivity {
                 reff.child(String.valueOf(maxid+1)).setValue(task);
 
                 Toast.makeText(AddTask.this, "Success!!",Toast.LENGTH_LONG).show();
-                getFragmentManager().beginTransaction().remove(AddTask.this).commit();
+
 
             }
         });
