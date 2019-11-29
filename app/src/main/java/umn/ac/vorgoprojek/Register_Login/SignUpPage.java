@@ -17,8 +17,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import umn.ac.vorgoprojek.MainActivity;
 import umn.ac.vorgoprojek.R;
@@ -79,6 +82,8 @@ public class SignUpPage extends AppCompatActivity {
                     return;
                 }
 
+
+
                 auth.createUserWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(SignUpPage.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -87,6 +92,20 @@ public class SignUpPage extends AppCompatActivity {
                                 if (!task.isSuccessful()){
                                     Toast.makeText(SignUpPage.this, "Authentication failed" +task.getException(), Toast.LENGTH_SHORT).show();
                                 } else {
+                                    reff.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                        }
+                                    });
+                                    getValues();
+                                    reff.child("userid").setValue(user);
+                                    Toast.makeText(SignUpPage.this, "Success Login", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(SignUpPage.this, MainActivity.class));
                                 }
                             }
@@ -97,6 +116,14 @@ public class SignUpPage extends AppCompatActivity {
 
 
         });
+
+
+    }
+
+    private void getValues(){
+        user.setUsername(edtUser.getText().toString());
+        user.setEmail(edtEmail.getText().toString());
+        user.setPass(edtPass.getText().toString());
     }
 
     @Override
