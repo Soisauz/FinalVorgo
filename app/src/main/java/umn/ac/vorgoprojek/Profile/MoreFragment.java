@@ -1,15 +1,15 @@
 package umn.ac.vorgoprojek.Profile;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+        import android.os.Bundle;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+        import androidx.annotation.NonNull;
+        import androidx.annotation.Nullable;
+        import androidx.fragment.app.Fragment;
 
-import umn.ac.vorgoprojek.R;
+        import umn.ac.vorgoprojek.R;
 
 public class MoreFragment extends Fragment {
     @Nullable
