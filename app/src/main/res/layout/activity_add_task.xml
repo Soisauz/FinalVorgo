@@ -36,8 +36,11 @@
 
     <ScrollView
         android:layout_width="382dp"
-        android:layout_height="580dp"
-        android:layout_margin="20dp"
+        android:layout_height="620dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle">
@@ -78,7 +81,7 @@
                         android:background="@drawable/edittextshape"
                         android:ems="5"
                         android:fontFamily="@font/montserrat"
-
+                        android:textColor="@color/black"
                         android:inputType="textPersonName"
                         android:padding="10dp" />
 
@@ -101,7 +104,7 @@
                         android:ems="5"
                         android:fontFamily="@font/montserrat"
                         android:inputType="textPersonName"
-
+                        android:textColor="@color/black"
                         android:padding="10dp" />
                 </LinearLayout>
 
@@ -116,7 +119,8 @@
                     android:hint="Name"
                     android:inputType="textPersonName"
                     android:padding="20dp"
-                    android:textColorHint="@color/black" />
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:id="@+id/txtDesc"
@@ -137,9 +141,10 @@
                     android:layout_marginRight="20dp"
                     android:background="@color/greyWhite"
                     android:ems="10"
-
+                    android:textColor="@color/black"
                     android:gravity="start|top"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:padding="20dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -163,7 +168,7 @@
 
                     <EditText
                         android:id="@+id/edtDate"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:background="@color/colorPrimary"
                         android:ems="5"

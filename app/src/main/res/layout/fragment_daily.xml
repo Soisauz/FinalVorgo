@@ -9,133 +9,135 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.918"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.953"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:layout_editor_absoluteY="587dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView2"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Today"
-                android:textColor="@color/grey"
-                android:textSize="18sp"
-                android:fontFamily="@font/montserrat"
-                android:padding="10dp"/>
+                android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvtoday"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:cardCornerRadius="5dp"
-                android:elevation="8dp"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:orientation="horizontal"
+                <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
+                    android:fontFamily="@font/montserrat"
+                    android:padding="10dp"
+                    android:text="Today"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp" />
 
-                    //Edit Icon Status
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@color/bluewhite">
-                    </ImageView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvtoday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false">
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
 
-                        //Judul Task
-                        <TextView
-                            android:layout_width="230dp"
+                        //Edit Icon Status
+
+                        <ImageView
+                            android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:text="Go Fishing With Zoey, Gardening "
-                            android:textSize="20dp"
-                            android:ellipsize="end"
-                            android:maxLines="1"
-                            android:layout_marginLeft="15dp">
-                        </TextView>
+                            android:src="@color/bluewhite"></ImageView>
 
-                        //Waktu Task
-                        <TextView
-                            android:layout_width="70dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="5.00am"
-                            android:textSize="20dp"
-                            android:layout_marginLeft="18dp">
-                        </TextView>
+                            android:orientation="horizontal">
+
+                            //Judul Task
+
+                            <TextView
+                                android:layout_width="230dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="15dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Go Fishing With Zoey, Gardening "
+                                android:textSize="20dp"></TextView>
+
+                            //Waktu Task
+
+                            <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="5.00am"
+                                android:textSize="20dp"></TextView>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:padding="10dp"
+                    android:text="Tomorrow"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tomorrow"
-                android:textColor="@color/grey"
-                android:textSize="18sp"
-                android:fontFamily="@font/montserrat"
-                android:padding="10dp"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:padding="10dp"
+                    android:text="Upcoming"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Upcoming"
-                android:textColor="@color/grey"
-                android:textSize="18sp"
-                android:fontFamily="@font/montserrat"
-                android:padding="10dp"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
+            </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+    </RelativeLayout>
+
+
+
 
 </FrameLayout>
+

@@ -16,6 +16,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import umn.ac.vorgoprojek.MainActivity;
 import umn.ac.vorgoprojek.R;
@@ -25,8 +28,10 @@ public class SignUpPage extends AppCompatActivity {
 
     private Button btnSignUp;
     private FirebaseAuth auth;
-
     private EditText edtUser, edtEmail, edtPass;
+    FirebaseDatabase database;
+    DatabaseReference reff;
+    User user;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +46,23 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
 
-        auth = FirebaseAuth.getInstance();
+
 
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
+        edtUser = (EditText)findViewById(R.id.edtUserName);
+        database = FirebaseDatabase.getInstance();
+        reff = database.getReference("user");
+        user = new User();
+
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = edtEmail.getText().toString().trim();
-                String pass = edtPass.getText().toString().trim();
+                final String email = edtEmail.getText().toString().trim();
+                final String pass = edtPass.getText().toString().trim();
+                final String username = edtUser.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
                     Toast.makeText(getApplicationContext(), "Enter email address", Toast.LENGTH_SHORT).show();
@@ -80,6 +91,8 @@ public class SignUpPage extends AppCompatActivity {
                                 }
                             }
                         });
+
+
             }
 
 

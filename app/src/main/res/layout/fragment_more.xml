@@ -7,207 +7,212 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/fl_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white"
-        android:layout_marginBottom="20dp">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="350dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="0"
-                        app:srcCompat="@android:drawable/btn_star_big_off" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtUsername"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Username"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/txtEmail"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Email"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtNumCompleteTask"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Number"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/txtCompleteTask"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Completed Task"
-                            android:textColor="@color/grey" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtNumCreatedTask"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Number"
-                            android:textColor="@color/black" />
-
-                        <TextView
-                            android:id="@+id/txtCreateTask"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Created Task"
-                            android:textColor="@color/grey" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="350dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            app:cardCornerRadius="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Statistic"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="vertical">
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="vertical">
-
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnSetting"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:text="Setting"
-            android:fontFamily="@font/montserrat"
-            android:background="@color/colorPrimary"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
 
-    </LinearLayout>
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@android:drawable/btn_star_big_off" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Username"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Email"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNumCompleteTask"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Number"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtCompleteTask"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Completed Task"
+                                android:textColor="@color/grey" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNumCreatedTask"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Number"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtCreateTask"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Created Task"
+                                android:textColor="@color/grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Statistic"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="155dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/montserrat"
+                android:text="Setting" />
+
+
+        </LinearLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
