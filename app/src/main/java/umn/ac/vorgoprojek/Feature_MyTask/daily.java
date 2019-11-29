@@ -39,7 +39,7 @@ public class daily extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(v.this, "Clicked the FAB!",Toast.LENGTH_LONG).show();
+                //Toast.makeText(v.this, "Clicked the FAB!",Toast.LENGTH_LONG).show();
             }
         });
         // Inflate the layout for this fragment

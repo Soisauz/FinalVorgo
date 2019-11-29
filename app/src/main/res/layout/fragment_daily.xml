@@ -48,8 +48,64 @@
                 android:padding="10dp"/>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvtoday"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="8dp"
+                app:cardElevation="10dp"
+                app:cardPreventCornerOverlap="false"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    //Edit Icon Status
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@color/bluewhite">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        //Judul Task
+                        <TextView
+                            android:layout_width="230dp"
+                            android:layout_height="30dp"
+                            android:text="Go Fishing With Zoey, Gardening "
+                            android:textSize="20dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:layout_marginLeft="15dp">
+                        </TextView>
+
+                        //Waktu Task
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="5.00am"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="18dp">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textView8"
