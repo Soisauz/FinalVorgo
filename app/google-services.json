@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "473126467515-1q2fhu5n6hr4qt4ej58mti5ueg76isba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "umn.ac.vorgoprojek",
+            "certificate_hash": "3f3b27e645bec05fa0da24bcc014873cf1d3a0bc"
+          }
+        },
+        {
           "client_id": "473126467515-a0h0tvs0hfi2v1i15vej6p8srbustpe0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
