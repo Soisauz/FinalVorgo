@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "473126467515",
-    "firebase_url": "https://vorgo-2431f.firebaseio.com",
-    "project_id": "vorgo-2431f",
-    "storage_bucket": "vorgo-2431f.appspot.com"
+    "project_number": "197581922331",
+    "firebase_url": "https://vorgo-8a293.firebaseio.com",
+    "project_id": "vorgo-8a293",
+    "storage_bucket": "vorgo-8a293.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:473126467515:android:6ddac214137e084964769e",
+        "mobilesdk_app_id": "1:197581922331:android:914a1dd1b75d1d9aa498be",
         "android_client_info": {
           "package_name": "umn.ac.vorgoprojek"
         }
       },
       "oauth_client": [
         {
-          "client_id": "473126467515-1q2fhu5n6hr4qt4ej58mti5ueg76isba.apps.googleusercontent.com",
+          "client_id": "197581922331-jhink0s2u2ekp5apri41gfoli3usju6a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "umn.ac.vorgoprojek",
@@ -23,28 +23,20 @@
           }
         },
         {
-          "client_id": "473126467515-a0h0tvs0hfi2v1i15vej6p8srbustpe0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "umn.ac.vorgoprojek",
-            "certificate_hash": "fea964543cb1d6419b700825d7181318349f3beb"
-          }
-        },
-        {
-          "client_id": "473126467515-pj7uj893d3huqc7mpqvcaptijkji8ph5.apps.googleusercontent.com",
+          "client_id": "197581922331-vavsgkc0hqso4gu45fo5j73psra02fqg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAMGvr1FRwYD-zaYHvDwPV6sVkmux-ERvc"
+          "current_key": "AIzaSyAmiFsrhNzL8M-Hp2QJDZHg-_B4HjZorog"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "473126467515-pj7uj893d3huqc7mpqvcaptijkji8ph5.apps.googleusercontent.com",
+              "client_id": "197581922331-vavsgkc0hqso4gu45fo5j73psra02fqg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
