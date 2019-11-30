@@ -9,21 +9,19 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Feature_MyTask.AddTask"  android:windowSoftInputMode="stateAlwaysHidden|adjustResize"></activity>
-        <activity android:name=".Register_Login.ForgotPass" ></activity>
+        <activity android:name=".Feature_MyTask.AddTask"  android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".Register_Login.ForgotPass" />
         <activity android:name=".Register_Login.SignUpPage" />
-        <activity android:name=".Register_Login.welcomePage" >
-        </activity>
+        <activity android:name=".Register_Login.welcomePage" />
         <activity android:name=".Register_Login.Loading">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Register_Login.LoginPage" />
-        <activity android:name=".MainActivity" >
-    </activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

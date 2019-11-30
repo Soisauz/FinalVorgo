@@ -3,7 +3,10 @@ package umn.ac.vorgoprojek.Feature_MyTask;
 import java.util.Date;
 
 public class Task {
-    private String edtFor, edtIn, edtTaskName, edtDesc, edtMember, edtDate;
+    private String edtFor, edtIn, edtTaskName, edtDesc, edtMember, edtDate, currUser;
+
+    public Task() {
+    }
 
     public String getEdtFor() {
         return edtFor;
@@ -53,7 +56,12 @@ public class Task {
         this.edtDate = edtDate;
     }
 
-    public Task() {
 
+    public String getCurrUser() {
+        return currUser;
+    }
+
+    public void setCurrUser(String currUser) {
+        this.currUser = currUser;
     }
 }
