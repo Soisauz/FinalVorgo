@@ -62,8 +62,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         TextView taskName, DueDate, taskImage;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            taskName =(TextView)itemView.findViewById(R.id.taskName);
-            DueDate = (TextView)itemView.findViewById(R.id.DueDate);
+            taskName =(TextView)itemView.findViewById(R.id.project_name);
+            DueDate = (TextView)itemView.findViewById(R.id.ProjectTask);
             taskImage = (TextView)itemView.findViewById(R.id.task_image);
         }
     }
