@@ -55,9 +55,11 @@ public class SignUpPage extends AppCompatActivity {
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPass = (EditText) findViewById(R.id.edtPass);
         edtUser = (EditText)findViewById(R.id.edtUserName);
+
         database = FirebaseDatabase.getInstance();
         reff = database.getReference("user");
         user = new User();
+        auth = FirebaseAuth.getInstance();
 
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +97,10 @@ public class SignUpPage extends AppCompatActivity {
                                     reff.addValueEventListener(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                                            getValues();
+                                            reff.child("userid").setValue(user);
+                                            Toast.makeText(SignUpPage.this, "Success Register", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(SignUpPage.this, MainActivity.class));
                                         }
 
                                         @Override
@@ -103,10 +108,6 @@ public class SignUpPage extends AppCompatActivity {
 
                                         }
                                     });
-                                    getValues();
-                                    reff.child("userid").setValue(user);
-                                    Toast.makeText(SignUpPage.this, "Success Login", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(SignUpPage.this, MainActivity.class));
                                 }
                             }
                         });
