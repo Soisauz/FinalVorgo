@@ -13,121 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasklist"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:padding="10dp"
-                    android:text="Today"
-                    android:textColor="@color/grey"
-                    android:textSize="18sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/ourdoes"/>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvtoday"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:elevation="8dp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="10dp"
-                    app:cardPreventCornerOverlap="false">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        //Edit Icon Status
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@color/bluewhite"></ImageView>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            //Judul Task
-
-                            <TextView
-                                android:layout_width="230dp"
-                                android:layout_height="30dp"
-                                android:layout_marginLeft="15dp"
-                                android:ellipsize="end"
-                                android:maxLines="1"
-                                android:text="Go Fishing With Zoey, Gardening "
-                                android:textSize="20dp"></TextView>
-
-                            //Waktu Task
-
-                            <TextView
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:text="5.00am"
-                                android:textSize="20dp"></TextView>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:padding="10dp"
-                    android:text="Tomorrow"
-                    android:textColor="@color/grey"
-                    android:textSize="18sp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:padding="10dp"
-                    android:text="Upcoming"
-                    android:textColor="@color/grey"
-                    android:textSize="18sp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </LinearLayout>
-
-        </ScrollView>
+            android:layout_height="match_parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabAddTask"
@@ -140,9 +29,5 @@
             android:clickable="true"
             app:srcCompat="@android:drawable/ic_menu_add" />
     </RelativeLayout>
-
-
-
-
 </FrameLayout>
 
