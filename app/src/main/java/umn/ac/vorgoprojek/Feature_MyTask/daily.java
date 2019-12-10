@@ -4,6 +4,7 @@ package umn.ac.vorgoprojek.Feature_MyTask;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import umn.ac.vorgoprojek.MainActivity;
 import umn.ac.vorgoprojek.R;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -93,15 +97,29 @@ public class daily extends Fragment {
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull TaskReceiveHolder holder, int position, @NonNull final TaskReceive model) {
+            protected void onBindViewHolder(@NonNull TaskReceiveHolder holder, final int position, @NonNull final TaskReceive model) {
                 holder.bindToTask(model, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Toast.makeText(getApplicationContext(),"Clicked this boy",Toast.LENGTH_LONG).show();
                     }
                 });
             }
         };
+
+        mRecycler.addOnItemTouchListener(new RecycleViewClickListener(getContext(), mRecycler, new RecycleViewClickListener
+                .OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getContext(), "Cardview ke - " + position, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getContext(), TaskDetail.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+            }
+        }));
 
         mAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mAdapter);
@@ -130,6 +148,8 @@ public class daily extends Fragment {
         Query query = reff.child("Task");
         return query;
     }
+
+
 
 
 }
