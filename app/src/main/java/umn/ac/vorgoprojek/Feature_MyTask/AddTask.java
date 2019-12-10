@@ -94,7 +94,6 @@ public class AddTask extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-                //String stringdate = dt.format(edtDate);
 
                 task.setCurrUser(currUser.trim());
                 task.setEdtFor(edtFor.getText().toString().trim());
@@ -107,6 +106,7 @@ public class AddTask extends AppCompatActivity {
                 reff.child(String.valueOf(maxid+1)).setValue(task);
 
                 Toast.makeText(AddTask.this, "Success!!",Toast.LENGTH_LONG).show();
+                finishAndRemoveTask();
 
 
             }
