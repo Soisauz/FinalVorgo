@@ -34,7 +34,7 @@ import umn.ac.vorgoprojek.R;
 public class AddTask extends AppCompatActivity {
 
     String currUser;
-    EditText edtFor, edtIn, edtTaskName, edtDesc, edtDate, edtMember;
+    EditText taskfor, taskin, taskname, taskdesc, taskdate, taskmember;
     Button btnAddTask;
     DatabaseReference reff;
     Task task;
@@ -46,14 +46,14 @@ public class AddTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-        edtFor = (EditText)findViewById(R.id.edtFor);
-        edtIn = (EditText)findViewById(R.id.edtIn);
-        edtTaskName = (EditText)findViewById(R.id.edtTaskName);
-        edtDesc = (EditText)findViewById(R.id.edtDesc);
-        edtDate = (EditText)findViewById(R.id.edtDate);
+        taskfor = (EditText)findViewById(R.id.edtFor);
+        taskin = (EditText)findViewById(R.id.edtIn);
+        taskname = (EditText)findViewById(R.id.edtTaskName);
+        taskdesc = (EditText)findViewById(R.id.edtDesc);
+        taskdate = (EditText)findViewById(R.id.edtDate);
         currUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        edtDate.setOnClickListener(new View.OnClickListener() {
+        taskdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final Calendar c = Calendar.getInstance();;
@@ -64,14 +64,14 @@ public class AddTask extends AppCompatActivity {
                 datePickerDialog = new DatePickerDialog(AddTask.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                        edtDate.setText(i2 +"/"+(i1+1)+"/"+i);
+                        taskdate.setText(i2 +"/"+(i1+1)+"/"+i);
                     }
                 }, mYear, mMonth, mDay);
                 datePickerDialog.show();
             }
         });
 
-        edtMember = (EditText)findViewById(R.id.edtMember);
+        taskmember = (EditText)findViewById(R.id.edtMember);
         btnAddTask = (Button)findViewById(R.id.btnAddTask);
         task = new Task();
         reff = FirebaseDatabase.getInstance().getReference().child("Task");
@@ -96,12 +96,12 @@ public class AddTask extends AppCompatActivity {
                 SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
 
                 task.setCurrUser(currUser.trim());
-                task.setEdtFor(edtFor.getText().toString().trim());
-                task.setEdtIn(edtIn.getText().toString().trim());
-                task.setEdtTaskName(edtTaskName.getText().toString().trim());
-                task.setEdtDesc(edtDesc.getText().toString().trim());
-                task.setEdtMember(edtMember.getText().toString().trim());
-                task.setEdtDate(edtDate.getText().toString().trim());
+                task.setTaskfor(taskfor.getText().toString().trim());
+                task.setTaskin(taskin.getText().toString().trim());
+                task.setTaskname(taskname.getText().toString().trim());
+                task.setTaskdesc(taskdesc.getText().toString().trim());
+                task.setTaskmember(taskmember.getText().toString().trim());
+                task.setTaskdate(taskdate.getText().toString().trim());
 
                 reff.child(String.valueOf(maxid+1)).setValue(task);
 
