@@ -13,6 +13,7 @@
         <activity android:name=".Register_Login.ForgotPass" />
         <activity android:name=".Register_Login.SignUpPage" />
         <activity android:name=".Register_Login.welcomePage" />
+        <activity android:name=".Feature_MyTask.TaskDetail"/>
         <activity android:name=".Register_Login.Loading">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
