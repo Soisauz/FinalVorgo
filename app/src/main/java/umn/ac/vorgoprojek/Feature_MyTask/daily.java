@@ -112,6 +112,7 @@ public class daily extends Fragment {
             public void onItemClick(View view, int position) {
                 Toast.makeText(getContext(), "Cardview ke - " + position, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getContext(), TaskDetail.class);
+                intent.putExtra("cardpos", position);
                 startActivity(intent);
             }
 
