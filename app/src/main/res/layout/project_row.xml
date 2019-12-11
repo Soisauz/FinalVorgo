@@ -1,73 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:background="@color/white"
-    android:orientation="horizontal"
-    android:layout_marginBottom="20dp"
-    android:layout_height="80dp"
-    android:paddingTop="3dp"
-    android:layout_margin="20dp">
 
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="0dp"
+    app:cardCornerRadius="0dp">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="4"
+        android:layout_margin="6dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="15dip">
+        android:baselineAligned="false">
 
-
-
-        <!--  ListRow Left sied Thumbnail image -->
-        <LinearLayout android:id="@+id/thumbnail"
-            android:visibility="visible"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="3dip">
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
             <TextView
-                android:id="@+id/task_image"
+                android:id="@+id/edtTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:textColor="#444444"
-                android:text="o"
-                android:textSize="20sp"/>
+                android:text="@string/project" />
+
         </LinearLayout>
-
-
-        <LinearLayout android:id="@+id/centerContent"
-            android:visibility="visible"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical"
-            >
-
-            <TextView
-                android:id="@+id/project_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="visible"
-                android:textColor="#8D8D8D"
-                android:drawablePadding="10dp"
-                android:text="Task Name here"
-                android:textSize="16sp"
-                android:layout_marginBottom="2dp"/>
-
-            <TextView
-                android:id="@+id/ProjectTask"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#676464"
-                android:text="Number Task"
-                android:typeface="sans"
-                android:textSize="14sp"/>
-        </LinearLayout>
-
 
     </LinearLayout>
-</LinearLayout>
+
+</android.support.v7.widget.CardView>
