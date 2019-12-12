@@ -97,8 +97,9 @@ public class SignUpPage extends AppCompatActivity {
                                     reff.addValueEventListener(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            String id1 = auth.getCurrentUser().getUid();
                                             getValues();
-                                            reff.child("userid").setValue(user);
+                                            reff.child(id1).setValue(user);
                                             Toast.makeText(SignUpPage.this, "Success Register", Toast.LENGTH_SHORT).show();
                                             startActivity(new Intent(SignUpPage.this, MainActivity.class));
                                         }
