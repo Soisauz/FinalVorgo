@@ -72,7 +72,7 @@ public class LoginPage extends AppCompatActivity {
                                     if (pass.length()<6){
                                         edtPass.setError(getString(R.string.min_pass));
                                     } else {
-                                        Toast.makeText(LoginPage.this, "Authentication Failed", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginPage.this, "Authentication Succesfull", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
                                     Intent i = new Intent(LoginPage.this, MainActivity.class);

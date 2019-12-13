@@ -129,6 +129,7 @@ public class daily extends Fragment {
         mAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mAdapter);
 
+
         return v;
     }
 
@@ -153,6 +154,8 @@ public class daily extends Fragment {
         Query query = reff.child("Task");
         return query;
     }
+
+
 
 
 

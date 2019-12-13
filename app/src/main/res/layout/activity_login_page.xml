@@ -88,34 +88,6 @@
             android:fontFamily="@font/montserrat"
             android:text="Sign in" />
 
-        <TextView
-            android:id="@+id/txtForgotPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="Forgot Password?"
-            android:textColor="@color/colorPrimary" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="-or-"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/btnGoogle"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/round_button" />
-
 
     </LinearLayout>
 

@@ -2,6 +2,8 @@ package umn.ac.vorgoprojek.Feature_MyTask;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -29,6 +31,7 @@ import java.util.Locale;
 import javax.microedition.khronos.egl.EGLDisplay;
 
 import umn.ac.vorgoprojek.Feature_Project.add_project;
+import umn.ac.vorgoprojek.Profile.MoreFragment;
 import umn.ac.vorgoprojek.R;
 
 public class AddTask extends AppCompatActivity {
@@ -40,7 +43,7 @@ public class AddTask extends AppCompatActivity {
     Task task;
     long maxid=0;
     DatePickerDialog datePickerDialog;
-
+    private int count=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,10 +93,12 @@ public class AddTask extends AppCompatActivity {
         });
 
 
+
         btnAddTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+
 
                 task.setCurrUser(currUser.trim());
                 task.setTaskfor(taskfor.getText().toString().trim());

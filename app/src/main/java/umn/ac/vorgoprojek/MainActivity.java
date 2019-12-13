@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import umn.ac.vorgoprojek.fragment.ChatFragment;
+
 import umn.ac.vorgoprojek.Feature_FriendList.FriendFragment;
 import umn.ac.vorgoprojek.Profile.MoreFragment;
 import umn.ac.vorgoprojek.Feature_Project.ProjectFragment;
@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         Fragment fragment = null;
         txtTitle = findViewById(R.id.txtTitle);
         switch (menuItem.getItemId()){
-            case R.id.chat_menu:
-                fragment = new ChatFragment();
-                txtTitle.setText("Chat");
-                break;
-
             case R.id.friend_menu:
                 fragment = new FriendFragment();
                 txtTitle.setText("Friend List");

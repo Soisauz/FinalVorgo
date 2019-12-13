@@ -31,9 +31,7 @@ import umn.ac.vorgoprojek.R;
 
 public class TaskFragment extends Fragment {
     DatabaseReference reff;
-    RecyclerView ourdoes;
-    ArrayList<item_task> list;
-    //TaskAdapter taskAdapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,35 +51,6 @@ public class TaskFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         setupViewPager(viewPager);
 
-/*
-        ourdoes = view.findViewById(R.id.ourdoes);
-        ourdoes.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        list = new ArrayList<item_task>();
-
-        //get data
-        reff = FirebaseDatabase.getInstance().getReference().child("Task");
-        reff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //set code to retrieve
-*/
-/*                for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
-                {
-                    item_task p = dataSnapshot1.getValue(item_task.class);
-                    list.add(p);
-                }
-                ourdoes = new TaskAdapter(TaskFragment.this, list);
-                *//*
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getContext(), "No data", Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
 
         return view;
 
