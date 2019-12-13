@@ -15,14 +15,27 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
+import umn.ac.vorgoprojek.Feature_FriendList.FriendList;
+import umn.ac.vorgoprojek.Feature_FriendList.FriendListViewHolder;
 import umn.ac.vorgoprojek.R;
 
 public class ProjectFragment extends Fragment {
 
-
+    private RecyclerView mProjectList;
+    private DatabaseReference reff;
+    private LinearLayoutManager mManager;
+    private FirebaseRecyclerAdapter<project, ProjectViewHolder> mAdapter;
 
     @Nullable
     @Override
@@ -37,7 +50,66 @@ public class ProjectFragment extends Fragment {
                 trans.replace(R.id.fl_container, childFragment).commit();
             }
         });
+
+        reff= FirebaseDatabase.getInstance().getReference();
+
+        mProjectList = (RecyclerView)view.findViewById(R.id.RVProject);
+        mProjectList.setHasFixedSize(true);
+
+        mManager = new LinearLayoutManager(getContext());
+        mManager.setReverseLayout(true);
+        mManager.setStackFromEnd(true);
+        mProjectList.setLayoutManager(mManager);
+
+        Query query = getQuery(reff);
+
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<project>()
+                .setQuery(query, project.class)
+                .build();
+
+        mAdapter = new FirebaseRecyclerAdapter<project, ProjectViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull ProjectViewHolder projectViewHolder, int i, @NonNull final project project) {
+                projectViewHolder.bindToProject(project, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    }
+                });
+            }
+
+            @Override
+            public ProjectViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+                return new ProjectViewHolder(inflater.inflate(R.layout.project_row, parent, false));
+            }
+        };
+
+        mAdapter.notifyDataSetChanged();
+        mProjectList.setAdapter(mAdapter);
+
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (mAdapter != null){
+            mAdapter.startListening();
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAdapter != null){
+            mAdapter.stopListening();
+        }
+    }
+
+    private Query getQuery(DatabaseReference reff){
+        //String UID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Query query = reff.child("Project");
+        return query;
     }
 
 

@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class project {
 
+
     String edtTitle, color;
     public project() {
 
@@ -29,13 +30,11 @@ public class project {
         this.color = color;
     }
 
-    public project(String edtTitle) {
-        this.edtTitle = edtTitle;
-    }
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("edtTitle", edtTitle);
+        result.put("color", color);
         return result;
     }
 
