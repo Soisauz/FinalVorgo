@@ -10,6 +10,7 @@
     android:elevation="0dp"
     app:cardBackgroundColor="#FFFFFF"
     android:contextClickable="true"
+    android:animateLayoutChanges="true"
     app:cardCornerRadius="8dp">
 
     <LinearLayout

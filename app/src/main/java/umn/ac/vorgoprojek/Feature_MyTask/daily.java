@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -35,6 +37,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import umn.ac.vorgoprojek.MainActivity;
 import umn.ac.vorgoprojek.R;
@@ -46,6 +49,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
  */
 public class daily extends Fragment {
 
+    FirebaseDatabase db;
     DatabaseReference reff;
     FloatingActionButton fab;
     private FirebaseRecyclerAdapter<TaskReceive, TaskReceiveHolder> mAdapter;
@@ -149,6 +153,8 @@ public class daily extends Fragment {
         Query query = reff.child("Task");
         return query;
     }
+
+
 
 
 

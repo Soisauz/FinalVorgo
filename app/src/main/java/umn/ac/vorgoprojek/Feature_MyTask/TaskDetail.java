@@ -2,10 +2,12 @@ package umn.ac.vorgoprojek.Feature_MyTask;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.renderscript.Sampler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,13 +23,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import umn.ac.vorgoprojek.R;
 
 public class TaskDetail extends AppCompatActivity {
 
     FirebaseDatabase db;
-    //private FirebaseRecyclerAdapter<TaskDetailReceive, TaskDetailReceiveHolder> mAdapter;
+    DatabaseReference reff;
     private TextView txttaskname, txttaskfor, txttaskdate, txttaskdesc, txttaskmember, txttaskin;
+    private String tskname, tskfor, tskdate, tskdesc, tskmember, tskin;
     private TaskDetailReceive tdr;
 
     public TaskDetail() {
@@ -40,7 +46,12 @@ public class TaskDetail extends AppCompatActivity {
         setContentView(R.layout.view_task);
 
         Intent intent = getIntent();
-        final String cardpos = String.valueOf(intent.getIntExtra("cardpos",0));
+        String cardpos = String.valueOf(intent.getIntExtra("cardpos",1));
+        int tempcardpos = Integer.parseInt(cardpos);
+        if (tempcardpos == 0) {
+            cardpos = "1";
+        }
+        final String cardposs = cardpos;
         //Toast.makeText(getApplicationContext(), cardpos, Toast.LENGTH_LONG).show();
 
         txttaskname = findViewById(R.id.taskname);
@@ -54,14 +65,14 @@ public class TaskDetail extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    TaskDetailReceive tdr = dataSnapshot.getValue(TaskDetailReceive.class);
+                    final TaskDetailReceive tdr = dataSnapshot.getValue(TaskDetailReceive.class);
 
-                    String taskname = tdr.getTaskname();
-                    String taskfor = tdr.getTaskfor();
-                    String taskdate = tdr.getTaskdate();
-                    String taskdesc = tdr.getTaskdesc();
-                    String taskmember = tdr.getTaskmember();
-                    String taskin = tdr.getTaskin();
+                    final String taskname = tdr.getTaskname();
+                    final String taskfor = tdr.getTaskfor();
+                    final String taskdate = tdr.getTaskdate();
+                    final String taskdesc = tdr.getTaskdesc();
+                    final String taskmember = tdr.getTaskmember();
+                    final String taskin = tdr.getTaskin();
 
                     txttaskname.setText(taskname);
                     txttaskfor.setText(taskfor);
@@ -78,6 +89,21 @@ public class TaskDetail extends AppCompatActivity {
             }
         });
 
+        reff = FirebaseDatabase.getInstance().getReference().child("Task").child(cardpos);
+
+        Button btnComplete = findViewById(R.id.btnComplete);
+
+        btnComplete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Map<String, Object> stat = new HashMap<>();
+                stat.put("status","completed");
+                reff.updateChildren(stat);
+                finishAndRemoveTask();
+            }
+        });
     }
+
+
 
 }

@@ -11,10 +11,22 @@ import java.util.Map;
 
 public class TaskDetailReceive {
     public String taskname;
+    public String taskdesc;
+    public String taskfor;
+    public String taskdate;
+    public String taskmember;
+    public String taskin;
+    public String status;
 
-    public String getTaskname() {
-        return taskname;
+    public String getStatus() {
+        return status;
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTaskname() { return taskname; }
 
     public void setTaskname(String taskname) {
         this.taskname = taskname;
@@ -59,12 +71,6 @@ public class TaskDetailReceive {
     public void setTaskin(String taskin) {
         this.taskin = taskin;
     }
-
-    public String taskdesc;
-    public String taskfor;
-    public String taskdate;
-    public String taskmember;
-    public String taskin;
 
     public TaskDetailReceive() {
     }

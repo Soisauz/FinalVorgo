@@ -7,11 +7,20 @@ public class Task {
     public Task() {
     }
 
-    private String taskfor, taskin, taskname, taskdesc, taskmember, taskdate, currUser;
+    private String taskfor;
+    private String taskin;
+    private String taskname;
+    private String taskdesc;
+    private String taskmember;
+    private String taskdate;
+    private String currUser;
+    private String status;
 
-    public String getTaskfor() {
-        return taskfor;
-    }
+    public String getStatus() { return status; }
+
+    public void setStatus(String status) { this.status = status; }
+
+    public String getTaskfor() { return taskfor; }
 
     public void setTaskfor(String taskfor) {
         this.taskfor = taskfor;
