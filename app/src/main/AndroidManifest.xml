@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
-        android:label="@string/app_name"
+        android:label="Vorgo"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -14,6 +14,7 @@
         <activity android:name=".Register_Login.SignUpPage" />
         <activity android:name=".Register_Login.welcomePage" />
         <activity android:name=".Feature_MyTask.TaskDetail"/>
+        <activity android:name=".Feature_Project.subproject"/>
         <activity android:name=".Register_Login.Loading">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,6 +2,7 @@ package umn.ac.vorgoprojek.Feature_Project;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,6 +30,8 @@ import com.google.firebase.database.Query;
 
 import umn.ac.vorgoprojek.Feature_FriendList.FriendList;
 import umn.ac.vorgoprojek.Feature_FriendList.FriendListViewHolder;
+import umn.ac.vorgoprojek.Feature_MyTask.RecycleViewClickListener;
+import umn.ac.vorgoprojek.Feature_MyTask.TaskDetail;
 import umn.ac.vorgoprojek.R;
 
 public class ProjectFragment extends Fragment {
@@ -83,6 +87,22 @@ public class ProjectFragment extends Fragment {
                 return new ProjectViewHolder(inflater.inflate(R.layout.project_row, parent, false));
             }
         };
+
+        mProjectList.addOnItemTouchListener(new RecycleViewClickListener(getContext(), mProjectList, new RecycleViewClickListener
+                .OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getContext(), "Cardview ke - " + position, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getContext(), subproject.class);
+                intent.putExtra("cardpos", position);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onItemLongClick(View view, int position) {
+
+            }
+        }));
 
         mAdapter.notifyDataSetChanged();
         mProjectList.setAdapter(mAdapter);
