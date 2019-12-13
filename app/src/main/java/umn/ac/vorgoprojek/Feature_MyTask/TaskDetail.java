@@ -96,9 +96,19 @@ public class TaskDetail extends AppCompatActivity {
         btnComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Map<String, Object> stat = new HashMap<>();
+                /*Map<String, Object> stat = new HashMap<>();
                 stat.put("status","completed");
                 reff.updateChildren(stat);
+                finishAndRemoveTask();*/
+                reff.removeValue();
+                finishAndRemoveTask();
+            }
+        });
+
+        TextView txtclose = findViewById(R.id.txtClose);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 finishAndRemoveTask();
             }
         });
