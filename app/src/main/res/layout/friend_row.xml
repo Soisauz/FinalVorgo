@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="15dp"
@@ -10,8 +11,8 @@
     android:elevation="0dp"
     app:cardBackgroundColor="#FFFFFF"
     android:contextClickable="true"
-    android:animateLayoutChanges="true"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="15dp">
 
     <LinearLayout
 
@@ -33,14 +34,11 @@
             android:padding="3dip"
             android:visibility="visible">
 
-            <TextView
-                android:id="@+id/task_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="o"
-                android:textColor="#444444"
-                android:textSize="20sp"
-                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/ProfPic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/user" />
         </LinearLayout>
 
 
@@ -54,21 +52,21 @@
             android:visibility="visible">
 
             <TextView
-                android:id="@+id/taskname"
+                android:id="@+id/namaUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:drawablePadding="10dp"
-                android:text="Task Name here"
+                android:text="nama User"
                 android:textColor="#8D8D8D"
                 android:textSize="16sp"
                 android:visibility="visible" />
 
             <TextView
-                android:id="@+id/taskdesc"
+                android:id="@+id/emailUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Number Task"
+                android:text="email user"
                 android:textColor="#676464"
                 android:textSize="14sp"
                 android:typeface="sans" />

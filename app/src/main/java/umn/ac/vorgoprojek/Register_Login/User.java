@@ -1,7 +1,7 @@
 package umn.ac.vorgoprojek.Register_Login;
 
 public class User {
-    private String username, email, pass;
+    public String username, email, pass;
 
     public User() {
     }

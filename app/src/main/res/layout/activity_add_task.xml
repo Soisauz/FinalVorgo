@@ -123,7 +123,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/txtDesc"
+                    android:id="@+id/taskdesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

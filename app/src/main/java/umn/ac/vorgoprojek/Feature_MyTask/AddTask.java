@@ -102,6 +102,7 @@ public class AddTask extends AppCompatActivity {
                 task.setTaskdesc(taskdesc.getText().toString().trim());
                 task.setTaskmember(taskmember.getText().toString().trim());
                 task.setTaskdate(taskdate.getText().toString().trim());
+                task.setStatus("uncompleted");
 
                 reff.child(String.valueOf(maxid+1)).setValue(task);
 

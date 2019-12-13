@@ -33,7 +33,7 @@ public class TaskFragment extends Fragment {
     DatabaseReference reff;
     RecyclerView ourdoes;
     ArrayList<item_task> list;
-    TaskAdapter taskAdapter;
+    //TaskAdapter taskAdapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
