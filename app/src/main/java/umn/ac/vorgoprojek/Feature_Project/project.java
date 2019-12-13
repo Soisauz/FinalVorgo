@@ -2,7 +2,7 @@ package umn.ac.vorgoprojek.Feature_Project;
 
 import android.widget.Button;
 import android.widget.EditText;
-
+import com.google.firebase.database.Exclude;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +32,7 @@ public class project {
     public project(String edtTitle) {
         this.edtTitle = edtTitle;
     }
-
+    @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("edtTitle", edtTitle);
