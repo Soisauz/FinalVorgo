@@ -110,12 +110,11 @@ public class daily extends Fragment {
             }
         };
 
-
         mRecycler.addOnItemTouchListener(new RecycleViewClickListener(getContext(), mRecycler, new RecycleViewClickListener
                 .OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                //Toast.makeText(getContext(), "Cardview ke - " + position, Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Cardview ke - " + position, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getContext(), TaskDetail.class);
                 intent.putExtra("cardpos", position);
                 startActivity(intent);

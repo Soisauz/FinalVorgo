@@ -296,20 +296,19 @@
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/montserrat"
                 android:text="Complete Task" />
-
-
-            <TextView
-                android:id="@+id/txtClose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="100dp"
-                android:background="@drawable/bgcircle"
-                android:gravity="center"
-                android:text="X"
-                android:textColor="@color/grey" />
-
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:background="@drawable/bgcircle"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:textColor="@color/grey"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"/>
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>

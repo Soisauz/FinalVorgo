@@ -10,9 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -40,10 +37,9 @@ import umn.ac.vorgoprojek.R;
 public class AddTask extends AppCompatActivity {
 
     String currUser;
-    EditText taskname, taskdesc, taskdate;
-    AutoCompleteTextView taskfor, taskin, taskmember;
+    EditText taskfor, taskin, taskname, taskdesc, taskdate, taskmember;
     Button btnAddTask;
-    DatabaseReference reff, reff2, reff3, reff4;
+    DatabaseReference reff;
     Task task;
     long maxid=0;
     DatePickerDialog datePickerDialog;
@@ -53,10 +49,8 @@ public class AddTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
 
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
-        taskfor = (AutoCompleteTextView) findViewById(R.id.edtFor);
-        taskin = (AutoCompleteTextView) findViewById(R.id.edtIn);
+        taskfor = (EditText)findViewById(R.id.edtFor);
+        taskin = (EditText)findViewById(R.id.edtIn);
         taskname = (EditText)findViewById(R.id.edtTaskName);
         taskdesc = (EditText)findViewById(R.id.edtDesc);
         taskdate = (EditText)findViewById(R.id.edtDate);
@@ -80,69 +74,8 @@ public class AddTask extends AppCompatActivity {
             }
         });
 
-        taskmember = (AutoCompleteTextView) findViewById(R.id.edtMember);
+        taskmember = (EditText)findViewById(R.id.edtMember);
         btnAddTask = (Button)findViewById(R.id.btnAddTask);
-
-        reff2 = FirebaseDatabase.getInstance().getReference().child("user");
-
-        final ArrayAdapter<String> autoComplete = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1);
-        reff2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot suggestionSnapshot : dataSnapshot.getChildren()) {
-                    String suggestion = suggestionSnapshot.child("username").getValue(String.class);
-                    autoComplete.add(suggestion);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        taskfor.setThreshold(1);
-        taskfor.setAdapter(autoComplete);
-
-        reff3 = FirebaseDatabase.getInstance().getReference().child("Project");
-
-        final ArrayAdapter<String> autoComplete2 = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1);
-        reff3.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot suggestionSnapshot : dataSnapshot.getChildren()) {
-                    String suggestion2 = suggestionSnapshot.child("edtTitle").getValue(String.class);
-                    autoComplete2.add(suggestion2);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        taskin.setThreshold(1);
-        taskin.setAdapter(autoComplete2);
-
-        reff4 = FirebaseDatabase.getInstance().getReference().child("user");
-
-        final ArrayAdapter<String> autoComplete3 = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1);
-        reff4.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot suggestionSnapshot : dataSnapshot.getChildren()) {
-                    String suggestion3 = suggestionSnapshot.child("username").getValue(String.class);
-                    autoComplete3.add(suggestion3);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        taskmember.setThreshold(1);
-        taskmember.setAdapter(autoComplete3);
-
         task = new Task();
         reff = FirebaseDatabase.getInstance().getReference().child("Task");
 
@@ -178,7 +111,7 @@ public class AddTask extends AppCompatActivity {
 
                 reff.child(String.valueOf(maxid+1)).setValue(task);
 
-                //Toast.makeText(AddTask.this, "Success!!",Toast.LENGTH_LONG).show();
+                Toast.makeText(AddTask.this, "Success!!",Toast.LENGTH_LONG).show();
                 finishAndRemoveTask();
 
 
