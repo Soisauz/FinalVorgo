@@ -33,14 +33,14 @@
             android:padding="3dip"
             android:visibility="visible">
 
-            <TextView
+            <ImageView
                 android:id="@+id/task_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="o"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:textColor="#444444"
                 android:textSize="20sp"
-                android:visibility="visible" />
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_excited" />
         </LinearLayout>
 
 
