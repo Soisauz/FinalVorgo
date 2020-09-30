@@ -30,7 +30,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-
 import javax.microedition.khronos.egl.EGLDisplay;
 
 import umn.ac.vorgoprojek.Feature_Project.add_project;
